@@ -14,7 +14,7 @@
 
 We want to install a web server on our production server, if we do the command `uname -a` we can determine that this a CentOS system. // This can also be found in the banner when you first load the virtual machine. 
 
-Since we are using a CentOS system, we will be using the <strong> yum package manager </strong>. The available web server for CentOS or yum is httpd, so we can install the web server doing the command `sudo yum install httpd`. 
+Since we are using a CentOS system, we will be using the <strong> yum package manager </strong>. The available web server for CentOS or yum is httpd, so we can install the web server doing the command `sudo yum install httpd`. // You may be prompted to confirm that you want to install dependecies for this package, you can enter `y` and click enter to proceed. 
 
 We will then need to start this service using `sudo systemctl start httpd`. 
 
