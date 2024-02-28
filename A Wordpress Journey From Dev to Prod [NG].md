@@ -39,7 +39,7 @@ We can now exit the docker container using `exit`
 
 Ensure that we are in the home directory using `pwd`, it output your directory <strong> /home/playerone </strong> 
 
-From here we can use the command `docker cp container:id/var/www/html /home/playerone <strong> OR </strong> .` Now when you display your contents in the home directory using `ls` it should show the directory <strong> html </strong>
+From here we can use the command `docker cp container:id/var/www/html .` Now when you display your contents in the home directory using `ls` it should show the directory <strong> html </strong>
 
 
 
