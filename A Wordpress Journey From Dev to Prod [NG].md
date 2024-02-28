@@ -21,5 +21,6 @@ We will then need to start this service using `sudo systemctl start httpd`.
 Great, we installed a web server! // Commands used: `uname -a`, `sudo yum install httpd`, `sudo systemctl start httpd`
 
 # Part 2:
-
+<strong> Migrate the development website to the production server that is located in the running container on the development server </strong>
+<
 
