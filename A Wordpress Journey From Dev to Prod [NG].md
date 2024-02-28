@@ -41,6 +41,26 @@ Ensure that we are in the home directory using `pwd`, it output your directory <
 
 From here we can use the command `docker cp container:id/var/www/html .` Now when you display your contents in the home directory using `ls` it should show the directory <strong> html </strong>
 
+Login to the Prod-Web server and go to the /var/www/ directory and follow the next step to transfer the directory.
+
+Nowe we can transfer this directory that is in our home directory from the Prod-Web server using the command `scp -r playerone@dev-web:/home/playerone/html`. We use the -r because we are not transferring a single file but an entire directory. 
+
+Once we have this file transferred, we can then go to the <source> /etc/httpd/httpd.conf </source> and under the Modules section we can include the following:
+`LoadModule php5_module modules/libphp5.so`
+
+Under DirectoryIndex in the same file we will add <source> index.php </source> next to <source> index.html> 
+
+Change permissions on the html directory in the directory <source> /var/www/html </source>, we will do this by using chmod 0755 html
+
+We will cd into the directory `cd html` then change all the files within the directory using `find / -type f -exec chmod 0644 {] \;`
+
+# Part 3
+<p><strong> Add HTTPS support for the website, this can be done with a self signed key on openSSL </strong><br>
+This is where we will create a an SSL key/certificate and add it to our config file</p>
+
+We first need to retrieve the ssl.conf file for httpd, we can do this by using `sudo yum install mod_ssl` 
+
+
 
 
 
