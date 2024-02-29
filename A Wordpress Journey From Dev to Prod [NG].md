@@ -1,5 +1,6 @@
 <p>// A Wordpress Journey From Dev to Prod [NG] //<br>
 // This tutorial is for learners, if you need something more copy and paste refer to the TDLR at the bottom // </p>
+
 # Requests:
 1. Install a web server, this is a CentOS operating system. Redhat enterprise
 
