@@ -60,6 +60,25 @@ This is where we will create a an SSL key/certificate and add it to our config f
 
 We first need to retrieve the ssl.conf file for httpd, we can do this by using `sudo yum install mod_ssl` 
 
+We will go to the Prod-Web and then navigate to home directory cd ~
+
+We will then generate our SSL keys using the following commands `sudo openssl genrsa -out ca.key 2048`, `sudo openssl req -new -key ca.key -out ca.csr` `sudo openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt`
+
+Then we will copy these to the necessary directories using `sudo cp ca.crt /etc/pki/tls/certs`, `sudo cp ca.key /etc/pki/tls/private/ca.key`, `sudo cp ca.csr /etc/pki/tls/private/ca.csr` 
+
+We will then go to <strong> /etc/httpd </strong> and we will change the ssl.conf to // SSLCertificateFile <strong> /etc/pki/tls/certs/ca.crt </strong> and //SSLCertificateKeyFile <strong> /etc/pki/tls/private/ca.key </strong> 
+
+# Part 4
+<strong> This step is easier to do first, since you can update the plugin and then refer back to step 1 and continue on. Automatically transferring over the updated plugin </strong> 
+
+Start in Dev-Web server, we can then bash into the docker container using `docker exec -it your_container_name_HERE bash`, ensure that the your_container_name_HERE is the container ID. You can find container IDs using `docker container ls`. There should be only one container available. 
+
+Once we are in the container, we will move our directory to `cd /html/wp-content/plugins/` 
+
+Then we will update the plugin using `wp update wp_filemanager`. 
+
+
+
 
 
 
