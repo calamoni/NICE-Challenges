@@ -55,7 +55,7 @@ Change permissions on the html directory in the directory <source> /var/www/html
 
 We will cd into the directory `cd html` then change all the files within the directory using `find / -type f -exec chmod 0644 {] \;`
 
-# Part 3
+# Part 3:
 <p><strong> Add HTTPS support for the website, this can be done with a self signed key on openSSL </strong><br>
 This is where we will create a an SSL key/certificate and add it to our config file</p>
 
@@ -69,7 +69,7 @@ Then we will copy these to the necessary directories using `sudo cp ca.crt /etc/
 
 We will then go to <strong> /etc/httpd </strong> and we will change the ssl.conf to // SSLCertificateFile <strong> /etc/pki/tls/certs/ca.crt </strong> and //SSLCertificateKeyFile <strong> /etc/pki/tls/private/ca.key </strong> 
 
-# Part 4
+# Part 4:
 <strong> This step is easier to do first, since you can update the plugin and then refer back to step 1 and continue on. Automatically transferring over the updated plugin </strong> 
 
 Start in Dev-Web server, we can then bash into the docker container using `docker exec -it your_container_name_HERE bash`, ensure that the your_container_name_HERE is the container ID. You can find container IDs using `docker container ls`. There should be only one container available. 
