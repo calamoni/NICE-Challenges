@@ -53,7 +53,7 @@ Under DirectoryIndex in the same file we will add <source> index.php </source> n
 
 Change permissions on the html directory in the directory <source> /var/www/html </source>, we will do this by using chmod 0755 html
 
-We will cd into the directory `cd html` then change all the files within the directory using `find / -type f -exec chmod 0644 {] \;`
+We will cd into the directory `cd html` then change all the files within the directory using `find . -type f -exec chmod 0644 {] \;`
 
 # Part 3:
 <p><strong> Add HTTPS support for the website, this can be done with a self signed key on openSSL </strong><br>
