@@ -46,7 +46,7 @@ Great, we installed a web server! // Commands used: `uname -a`, `sudo yum instal
 
 <strong> YOU MIGHT NEED TO CHANGE PERMISSIONS ON HTML DIRECTORY BEFORE USING SCP IF YOU GET THE ERROR PERMISSION DENIED. REFER TO STEP #13 IN THIS MODULE </strong> 
 
-10. Now we can transfer this directory that is in our home directory from the Prod-Web server using the command `scp -r playerone@dev-web:/home/playerone/html`. We use the -r because we are not transferring a single file but an entire directory. 
+10. Now we can transfer this directory that is in our home directory from the Prod-Web server using the command `scp -r playerone@dev-web:/home/playerone/html`. We use the -r because we are not transferring a single file but an entire directory. Replace <strong> dev-web </strong> with the IP address in the network topology. 
 
 ~~Once we have this file transferred, we can then go to the <source> /etc/httpd/httpd.conf </source> and under the Modules section we can include the following:
 `LoadModule php5_module modules/libphp5.so`~~
