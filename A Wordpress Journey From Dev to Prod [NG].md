@@ -84,6 +84,19 @@ Once we are in the container, we will move our directory to `cd /html/wp-content
 
 Then we will update the plugin using `wp update wp_filemanager`. 
 
+<strong> If you didn't update the plugin before transferring the file you can complete it this way </strong>
+
+cd into <strong> /var/www/html/wp-content/plugins </strong> 
+
+wget https://downloads.wordpress.org/plugin/wp-file-manager.zip
+
+Remove the original wp-file-manager plugin doing `sudo remove -r wp-file-manager` 
+
+Unzip the zip file `sudo unzip wp-file-manger.zip`
+
+Remove the zip file `sudo rm -r wp-file-manager.zip`
+
+Restart httpd `sudo systemctl restart httpd`
 
 
 
