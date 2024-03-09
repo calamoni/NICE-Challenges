@@ -73,7 +73,7 @@ We will then generate our SSL keys using the following commands `sudo openssl ge
 
 Then we will copy these to the necessary directories using `sudo cp ca.crt /etc/pki/tls/certs`, `sudo cp ca.key /etc/pki/tls/private/ca.key`, `sudo cp ca.csr /etc/pki/tls/private/ca.csr` 
 
-We will then go to <strong> /etc/httpd </strong> and we will change the ssl.conf to // SSLCertificateFile <strong> /etc/pki/tls/certs/ca.crt </strong> and //SSLCertificateKeyFile <strong> /etc/pki/tls/private/ca.key </strong> 
+We will then go to <strong> /etc/httpd/conf.d/ssl.conf </strong> and we will change the ssl.conf to // SSLCertificateFile <strong> /etc/pki/tls/certs/ca.crt </strong> and //SSLCertificateKeyFile <strong> /etc/pki/tls/private/ca.key </strong> 
 
 # Section 4:
 <strong> This step is easier to do first, since you can update the plugin and then refer back to step 1 and continue on. Automatically transferring over the updated plugin </strong> 
