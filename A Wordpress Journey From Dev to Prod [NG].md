@@ -59,6 +59,8 @@ Great, we installed a web server! // Commands used: `uname -a`, `sudo yum instal
 
 14. We will cd into the directory `cd html` then change all the files within the directory using `find . -type f -exec chmod 0644 {} \;`
 
+15. Restart httpd `sudo systemctl restart httpd`.
+
 # Section 3:
 <p><strong> Add HTTPS support for the website, this can be done with a self signed key on openSSL </strong><br>
 This is where we will create a an SSL key/certificate and add it to our config file</p>
