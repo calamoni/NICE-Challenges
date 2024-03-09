@@ -40,7 +40,7 @@ Great, we installed a web server! // Commands used: `uname -a`, `sudo yum instal
 
 7. Ensure that we are in the home directory using `pwd`, it output your directory <strong> /home/playerone </strong> 
 
-8. From here we can use the command `docker cp container:id/var/www/html .` Now when you display your contents in the home directory using `ls` it should show the directory <strong> html </strong>
+8. From here we can use the command `docker cp containerid:/var/www/html .` Now when you display your contents in the home directory using `ls` it should show the directory <strong> html </strong>
 
 9. Login to the Prod-Web server and go to the /var/www/ directory and follow the next step to transfer the directory.
 
@@ -51,7 +51,7 @@ Great, we installed a web server! // Commands used: `uname -a`, `sudo yum instal
 ~~Once we have this file transferred, we can then go to the <source> /etc/httpd/httpd.conf </source> and under the Modules section we can include the following:
 `LoadModule php5_module modules/libphp5.so`~~
 
-11. Install PHP using `sudo yum install PHP` on <strong> Prod-Web </strong> Server
+11. Install PHP using `sudo yum install php` on <strong> Prod-Web </strong> Server
 
 12. Under the /etc/httpd/httpd.conf config file, there will be a DirectoryIndex, we will add <strong> index.php </strong> next to <source> index.html
 
