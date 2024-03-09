@@ -88,7 +88,7 @@ Then we will update the plugin using `wp update wp_filemanager`.
 
 cd into <strong> /var/www/html/wp-content/plugins </strong> 
 
-wget https://downloads.wordpress.org/plugin/wp-file-manager.zip
+Download the file using `wget https://downloads.wordpress.org/plugin/wp-file-manager.zip`
 
 Remove the original wp-file-manager plugin doing `sudo remove -r wp-file-manager` 
 
