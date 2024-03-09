@@ -57,7 +57,7 @@ Great, we installed a web server! // Commands used: `uname -a`, `sudo yum instal
 
 13. Change permissions on the html directory in the directory <source> /var/www/html </source>, we will do this by using chmod 0755 html
 
-14. We will cd into the directory `cd html` then change all the files within the directory using `find . -type f -exec chmod 0644 {] \;`
+14. We will cd into the directory `cd html` then change all the files within the directory using `find . -type f -exec chmod 0644 {} \;`
 
 # Section 3:
 <p><strong> Add HTTPS support for the website, this can be done with a self signed key on openSSL </strong><br>
