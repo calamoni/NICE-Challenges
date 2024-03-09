@@ -46,8 +46,10 @@ Login to the Prod-Web server and go to the /var/www/ directory and follow the ne
 
 Nowe we can transfer this directory that is in our home directory from the Prod-Web server using the command `scp -r playerone@dev-web:/home/playerone/html`. We use the -r because we are not transferring a single file but an entire directory. 
 
-Once we have this file transferred, we can then go to the <source> /etc/httpd/httpd.conf </source> and under the Modules section we can include the following:
-`LoadModule php5_module modules/libphp5.so`
+~~ Once we have this file transferred, we can then go to the <source> /etc/httpd/httpd.conf </source> and under the Modules section we can include the following:
+`LoadModule php5_module modules/libphp5.so` ~~
+
+Install PHP using `sudo yum install PHP` on <strong> Prod-Web </strong> Server
 
 Under DirectoryIndex in the same file we will add <source> index.php </source> next to <source> index.html> 
 
