@@ -53,7 +53,7 @@ Great, we installed a web server! // Commands used: `uname -a`, `sudo yum instal
 
 11. Install PHP using `sudo yum install PHP` on <strong> Prod-Web </strong> Server
 
-12. Under DirectoryIndex in the same file we will add <source> index.php </source> next to <source> index.html> 
+12. Under the /etc/httpd/httpd.conf config file, there will be a DirectoryIndex, we will add <source> index.php </source> next to <source> index.html> 
 
 13. Change permissions on the html directory in the directory <source> /var/www/html </source>, we will do this by using chmod 0755 html
 
